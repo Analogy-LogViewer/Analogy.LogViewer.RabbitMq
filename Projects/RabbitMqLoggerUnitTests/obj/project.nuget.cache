@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "LttaG0b10ijHE5DDbfuEMeKB8djL+f2sdBnxTykhiarr1BKgY8qGg5S/J4uHZBcTtWESmXUNtZ/Nmwm6SJpcbQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\danw2\\source\\repos2\\Analogy.LogViewer.RabbitMQ\\RabbitMqLoggerUnitTests\\RabbitMqLoggerUnitTests.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\danw2\\.nuget\\packages\\analogy.logviewer.interfaces\\2.7.2\\analogy.logviewer.interfaces.2.7.2.nupkg.sha512",
+    "C:\\Users\\danw2\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
+    "C:\\Users\\danw2\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
+    "C:\\Users\\danw2\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
+    "C:\\Users\\danw2\\.nuget\\packages\\mstest.testadapter\\2.1.0\\mstest.testadapter.2.1.0.nupkg.sha512",
+    "C:\\Users\\danw2\\.nuget\\packages\\mstest.testframework\\2.1.0\\mstest.testframework.2.1.0.nupkg.sha512",
+    "C:\\Users\\danw2\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\danw2\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\danw2\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\danw2\\.nuget\\packages\\system.resources.extensions\\4.6.0\\system.resources.extensions.4.6.0.nupkg.sha512",
+    "C:\\Users\\danw2\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

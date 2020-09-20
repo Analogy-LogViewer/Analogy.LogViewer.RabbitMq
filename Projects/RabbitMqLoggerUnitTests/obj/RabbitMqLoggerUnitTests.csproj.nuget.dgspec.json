@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\danw2\\source\\repos2\\Analogy.LogViewer.RabbitMQ\\RabbitMqLoggerUnitTests\\RabbitMqLoggerUnitTests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\danw2\\source\\repos2\\Analogy.LogViewer.RabbitMQ\\RabbitMqLoggerUnitTests\\RabbitMqLoggerUnitTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\danw2\\source\\repos2\\Analogy.LogViewer.RabbitMQ\\RabbitMqLoggerUnitTests\\RabbitMqLoggerUnitTests.csproj",
+        "projectName": "RabbitMqLoggerUnitTests",
+        "projectPath": "C:\\Users\\danw2\\source\\repos2\\Analogy.LogViewer.RabbitMQ\\RabbitMqLoggerUnitTests\\RabbitMqLoggerUnitTests.csproj",
+        "packagesPath": "C:\\Users\\danw2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\danw2\\source\\repos2\\Analogy.LogViewer.RabbitMQ\\RabbitMqLoggerUnitTests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\danw2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "E:\\workspaces\\danw25\\RMQ\\Analogy.LogViewer.RabbitMq\\Analogy.LogViewer.RabbitMq\\Analogy.LogViewer.RabbitMq.csproj": {
+                "projectPath": "E:\\workspaces\\danw25\\RMQ\\Analogy.LogViewer.RabbitMq\\Analogy.LogViewer.RabbitMq\\Analogy.LogViewer.RabbitMq.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Analogy.LogViewer.Interfaces": {
+              "target": "Package",
+              "version": "[2.7.2, )"
+            },
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.2.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\workspaces\\danw25\\RMQ\\Analogy.LogViewer.RabbitMq\\Analogy.LogViewer.RabbitMq\\Analogy.LogViewer.RabbitMq.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\workspaces\\danw25\\RMQ\\Analogy.LogViewer.RabbitMq\\Analogy.LogViewer.RabbitMq\\Analogy.LogViewer.RabbitMq.csproj",
+        "projectName": "Analogy.LogViewer.RabbitMq",
+        "projectPath": "E:\\workspaces\\danw25\\RMQ\\Analogy.LogViewer.RabbitMq\\Analogy.LogViewer.RabbitMq\\Analogy.LogViewer.RabbitMq.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    }
+  }
+}
