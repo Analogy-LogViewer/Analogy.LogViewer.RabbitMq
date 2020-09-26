@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analogy.LogViewer.RabbitMQ2", "Analogy.LogViewer.RabbitMQ\Analogy.LogViewer.RabbitMQ2.csproj", "{DC5CBD08-E925-4B41-B403-DB78FBE6FFBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Analogy.LogViewer.RabbitMq", "Analogy.LogViewer.RabbitMQ\Analogy.LogViewer.RabbitMq.csproj", "{DFA093A7-25CB-444E-960A-6856706F0F8F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMqLoggerUnitTests", "RabbitMqLoggerUnitTests\RabbitMqLoggerUnitTests.csproj", "{0E69502D-7766-4336-AAEE-276C185E3178}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DC5CBD08-E925-4B41-B403-DB78FBE6FFBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC5CBD08-E925-4B41-B403-DB78FBE6FFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC5CBD08-E925-4B41-B403-DB78FBE6FFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC5CBD08-E925-4B41-B403-DB78FBE6FFBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFA093A7-25CB-444E-960A-6856706F0F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFA093A7-25CB-444E-960A-6856706F0F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFA093A7-25CB-444E-960A-6856706F0F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFA093A7-25CB-444E-960A-6856706F0F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E69502D-7766-4336-AAEE-276C185E3178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E69502D-7766-4336-AAEE-276C185E3178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E69502D-7766-4336-AAEE-276C185E3178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E69502D-7766-4336-AAEE-276C185E3178}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
