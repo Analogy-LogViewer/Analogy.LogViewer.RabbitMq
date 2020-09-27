@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/github/issues/Analogy-LogViewer/Analogy.LogViewer.RabbitMq" alt="Issues" />
 </a>
 ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/Analogy-LogViewer/Analogy.LogViewer.RabbitMq)
-<a href="https://github.com/Analogy-LogViewer/Analogy.LogViewer.RabbitMq/blob/master/LICENSE.md">
+<a href="https://github.com/Analogy-LogViewer/Analogy.LogViewer.RabbitMq/blob/master/LICENSE">
     <img src="https://img.shields.io/github/license/Analogy-LogViewer/Analogy.LogViewer.RabbitMq" alt="License" />
 </a>
 [![Nuget](https://img.shields.io/nuget/v/Analogy.LogViewer.RabbitMq)](https://www.nuget.org/packages/Analogy.LogViewer.RabbitMq/) 
