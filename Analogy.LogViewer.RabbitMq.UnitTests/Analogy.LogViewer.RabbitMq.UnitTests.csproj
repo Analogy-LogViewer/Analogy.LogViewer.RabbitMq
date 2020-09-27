@@ -12,7 +12,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Analogy.LogViewer.RabbitMQ\Analogy.LogViewer.RabbitMq.csproj" />
-    <ProjectReference Include="E:\workspaces\danw25\RMQ\Analogy.LogViewer.RabbitMq\Analogy.LogViewer.RabbitMq\Analogy.LogViewer.RabbitMq.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="TestLog.log">
