@@ -1,9 +1,9 @@
 ﻿using Analogy.Interfaces;
 using Analogy.Interfaces.Factories;
-using Analogy.LogViewer.RabbitMq.Properties;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using Analogy.LogViewer.RabbitMq.Properties;
 
 namespace Analogy.LogViewer.RabbitMq
 {
@@ -18,9 +18,9 @@ namespace Analogy.LogViewer.RabbitMq
 
     public IEnumerable<IAnalogyChangeLog> ChangeLog { get; set; } = RabbitMqChangeLog.GetChangeLog();
 
-    public Image LargeImage { get; set; } = (Image) Resources.rabbit_32x32;
+    public Image LargeImage { get; set; } = (Image) Resources.rabbitmq32x32;
 
-    public Image SmallImage { get; set; } = (Image) Resources.rabbit_16x16;
+    public Image SmallImage { get; set; } = (Image) Resources.rabbitmq16x16;
 
     public IEnumerable<string> Contributors { get; set; }
 
