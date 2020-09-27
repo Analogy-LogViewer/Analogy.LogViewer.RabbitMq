@@ -18,6 +18,7 @@
 		<GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
 		<DebugSymbols>true</DebugSymbols>
 		<DebugType>portable</DebugType>
+		<PackageIcon>AnalogyRabbitMq.png</PackageIcon>
 	</PropertyGroup>
 	<ItemGroup>
 		<Compile Remove="Properties\AssemblyInfo.cs" />
@@ -46,5 +47,11 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Include="..\Assets\AnalogyRabbitMq.png">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
 	</ItemGroup>
 </Project>
