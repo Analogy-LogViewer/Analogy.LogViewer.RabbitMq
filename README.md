@@ -1,4 +1,5 @@
-# Analogy RabbitMq Parser
+# Analogy RabbitMq Parser  <img src="./Assets/AnalogyRabbitMq.png" align="right" width="155px" height="155px">
+
 
 
 [![Gitter](https://badges.gitter.im/Analogy-LogViewer/community.svg)](https://gitter.im/Analogy-LogViewer/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
