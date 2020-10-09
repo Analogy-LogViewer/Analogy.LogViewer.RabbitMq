@@ -2,6 +2,7 @@
 
 
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/899b6bab8b954353a8695b1762f89354)](https://app.codacy.com/gh/Analogy-LogViewer/Analogy.LogViewer.RabbitMq?utm_source=github.com&utm_medium=referral&utm_content=Analogy-LogViewer/Analogy.LogViewer.RabbitMq&utm_campaign=Badge_Grade)
 [![Gitter](https://badges.gitter.im/Analogy-LogViewer/community.svg)](https://gitter.im/Analogy-LogViewer/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Nuget](https://img.shields.io/nuget/dt/Analogy.LogViewer.RabbitMq)](https://www.nuget.org/packages/Analogy.LogViewer.RabbitMq/) 
 [![Build Status](https://dev.azure.com/Analogy-LogViewer/Analogy%20Log%20Viewer/_apis/build/status/Analogy-LogViewer.Analogy.LogViewer.RabbitMq?branchName=master)](https://dev.azure.com/Analogy-LogViewer/Analogy%20Log%20Viewer/_build/latest?definitionId=38&branchName=master) ![.NET Core Desktop](https://github.com/Analogy-LogViewer/Analogy.LogViewer.RabbitMq/workflows/.NET%20Core%20Desktop/badge.svg)
