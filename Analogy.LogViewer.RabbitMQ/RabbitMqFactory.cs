@@ -12,6 +12,11 @@ namespace Analogy.LogViewer.RabbitMq
     internal static Guid Id = new Guid("AB966FE4-8D31-4114-9260-74B22A6D61C8");
     internal static string _title = "RabbitMq";
 
+    public void RegisterNotificationCallback(INotificationReporter notificationReporter)
+    {
+        
+    }
+
     public Guid FactoryId { get; set; } = Id;
 
     public string Title { get; set; } = "RabbitMq";
