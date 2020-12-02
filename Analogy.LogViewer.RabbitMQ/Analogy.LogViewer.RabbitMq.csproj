@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net471;net472;netcoreapp3.1</TargetFrameworks>
-		<Version>1.1.0</Version>
+		<TargetFrameworks>net48;net471;net472;netcoreapp3.1</TargetFrameworks>
+		<Version>1.1.1</Version>
 		<OutputPath>bin\$(Configuration)\</OutputPath>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Authors>Dan Weinstein, Lior Banai</Authors>
@@ -27,7 +27,7 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Analogy.LogViewer.Interfaces" Version="2.8.2.5" />
-		<PackageReference Include="Analogy.LogViewer.Template" Version="1.6.10.1" />
+		<PackageReference Include="Analogy.LogViewer.Template" Version="1.7.0" />
 		<PackageReference Include="Microsoft.Build.Tasks.Git" Version="1.0.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -36,7 +36,7 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="System.Resources.Extensions" Version="4.6.0" />
+		<PackageReference Include="System.Resources.Extensions" Version="5.0.0" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Compile Update="Properties\Resources.Designer.cs">

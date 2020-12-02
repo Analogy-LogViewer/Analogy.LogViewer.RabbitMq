@@ -46,7 +46,9 @@ namespace Analogy.LogViewer.RabbitMq
             {
               logLine = logLine + Environment.NewLine + log;
               if (index >= logArray.Length)
-                break;
+              {
+                  break;
+              }
             }
           }
           Message line = ParseLine(logLine, CultureInfo.InvariantCulture);

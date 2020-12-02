@@ -66,7 +66,10 @@ namespace Analogy.LogViewer.RabbitMq
       ILogMessageCreatedHandler messagesHandler)
     {
       if (!CanOpenFile(fileName))
-        return (IEnumerable<AnalogyLogMessage>) new List<AnalogyLogMessage>(0);
+      {
+          return (IEnumerable<AnalogyLogMessage>) new List<AnalogyLogMessage>(0);
+      }
+
       IEnumerable<AnalogyLogMessage> analogyLogMessages = await LogReader.Process(fileName, token, messagesHandler);
       return analogyLogMessages;
     }
@@ -77,11 +80,16 @@ namespace Analogy.LogViewer.RabbitMq
     {
       List<FileInfo> list = ((IEnumerable<FileInfo>) dirInfo.GetFiles("*.txt")).ToList<FileInfo>();
       if (!recursiveLoad)
-        return (IEnumerable<FileInfo>) list;
+      {
+          return (IEnumerable<FileInfo>) list;
+      }
+
       try
       {
         foreach (DirectoryInfo directory in dirInfo.GetDirectories())
-          list.AddRange(GetSupportedFiles(directory, true));
+        {
+            list.AddRange(GetSupportedFiles(directory, true));
+        }
       }
       catch (Exception ex)
       {
