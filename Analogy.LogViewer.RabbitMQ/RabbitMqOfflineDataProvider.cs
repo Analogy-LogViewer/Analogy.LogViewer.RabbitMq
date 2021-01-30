@@ -9,101 +9,95 @@ using System.Threading.Tasks;
 
 namespace Analogy.LogViewer.RabbitMq
 {
-  public class RabbitMqOfflineDataProvider : IAnalogyOfflineDataProvider, IAnalogyDataProvider
-  {
-    private static string _title = "RabbitMQ";
-
-    public Task InitializeDataProviderAsync(IAnalogyLogger logger)
+    public class RabbitMqOfflineDataProvider : Template.OfflineDataProvider
     {
-      LogReader = new RabbitMqLogReader();
-      return Task.CompletedTask;
-    }
+        private static string _title = "RabbitMQ";
 
-    public void MessageOpened(AnalogyLogMessage message)
-    {
-    }
-
-    public Image SmallImage { get; set; }
-
-    public bool DisableFilePoolingOption { get; } = false;
-
-    public bool CanSaveToLogFile { get; } = false;
-
-    public string FileOpenDialogFilters { get; } = "RabbitMQ Log file |*.log";
-
-    public string FileSaveDialogFilters { get; } = string.Empty;
-
-    public IEnumerable<string> SupportFormats { get; } = (IEnumerable<string>) new string[1]
-    {
-      "*.log"
-    };
-
-    public string InitialFolderFullPath => Environment.CurrentDirectory;
-
-    public (Color backgroundColor, Color foregroundColor) GetColorForMessage(
-      IAnalogyLogMessage logMessage)
-    {
-      return (Color.Empty, Color.Empty);
-    }
-
-    public IEnumerable<(string originalHeader, string replacementHeader)> GetReplacementHeaders() => (IEnumerable<(string, string)>) Array.Empty<(string, string)>();
-
-    public Guid Id { get; set; } = RabbitMqFactory.Id;
-
-    public string OptionalTitle
-    {
-      get => _title;
-      set => _title = value;
-    }
-
-    public bool UseCustomColors { get; set; } = false;
-
-    public RabbitMqLogReader LogReader { get; set; }
-
-    public async Task<IEnumerable<AnalogyLogMessage>> Process(
-      string fileName,
-      CancellationToken token,
-      ILogMessageCreatedHandler messagesHandler)
-    {
-      if (!CanOpenFile(fileName))
-      {
-          return (IEnumerable<AnalogyLogMessage>) new List<AnalogyLogMessage>(0);
-      }
-
-      IEnumerable<AnalogyLogMessage> analogyLogMessages = await LogReader.Process(fileName, token, messagesHandler);
-      return analogyLogMessages;
-    }
-
-    public IEnumerable<FileInfo> GetSupportedFiles(
-      DirectoryInfo dirInfo,
-      bool recursiveLoad)
-    {
-      List<FileInfo> list = ((IEnumerable<FileInfo>) dirInfo.GetFiles("*.txt")).ToList<FileInfo>();
-      if (!recursiveLoad)
-      {
-          return (IEnumerable<FileInfo>) list;
-      }
-
-      try
-      {
-        foreach (DirectoryInfo directory in dirInfo.GetDirectories())
+        public override async Task InitializeDataProviderAsync(IAnalogyLogger logger)
         {
-            list.AddRange(GetSupportedFiles(directory, true));
+            await base.InitializeDataProviderAsync(logger);
+            LogReader = new RabbitMqLogReader();
+
         }
-      }
-      catch (Exception ex)
-      {
-        return (IEnumerable<FileInfo>) list;
-      }
-      return (IEnumerable<FileInfo>) list;
+        public override Image SmallImage { get; set; }
+
+        public override bool DisableFilePoolingOption { get; set; } = false;
+
+        public override bool CanSaveToLogFile { get; set; } = false;
+
+        public override string FileOpenDialogFilters { get; set; } = "RabbitMQ Log file |*.log";
+
+        public override string FileSaveDialogFilters { get; set; } = string.Empty;
+
+        public override IEnumerable<string> SupportFormats { get; set; } = (IEnumerable<string>)new string[1]
+        {
+            "*.log"
+        };
+
+        public override string InitialFolderFullPath => Environment.CurrentDirectory;
+
+        public override (Color backgroundColor, Color foregroundColor) GetColorForMessage(
+          IAnalogyLogMessage logMessage)
+        {
+            return (Color.Empty, Color.Empty);
+        }
+
+        public override IEnumerable<(string originalHeader, string replacementHeader)> GetReplacementHeaders() => (IEnumerable<(string, string)>)Array.Empty<(string, string)>();
+
+        public override Guid Id { get; set; } = RabbitMqFactory.Id;
+
+        public override string OptionalTitle
+        {
+            get => _title;
+            set => _title = value;
+        }
+
+        public override bool UseCustomColors { get; set; } = false;
+
+        public RabbitMqLogReader LogReader { get; set; }
+
+        public override async Task<IEnumerable<AnalogyLogMessage>> Process(
+          string fileName,
+          CancellationToken token,
+          ILogMessageCreatedHandler messagesHandler)
+        {
+            if (!CanOpenFile(fileName))
+            {
+                return (IEnumerable<AnalogyLogMessage>)new List<AnalogyLogMessage>(0);
+            }
+
+            IEnumerable<AnalogyLogMessage> analogyLogMessages = await LogReader.Process(fileName, token, messagesHandler);
+            return analogyLogMessages;
+        }
+
+        protected override List<FileInfo> GetSupportedFilesInternal(DirectoryInfo dirInfo, bool recursive)
+        {
+
+            List<FileInfo> list = ((IEnumerable<FileInfo>)dirInfo.GetFiles("*.log")).ToList<FileInfo>();
+            if (!recursive)
+            {
+                return list;
+            }
+
+            try
+            {
+                foreach (DirectoryInfo directory in dirInfo.GetDirectories())
+                {
+                    list.AddRange(GetSupportedFiles(directory, true));
+                }
+            }
+            catch (Exception ex)
+            {
+                return list;
+            }
+            return list;
+        }
+
+
+        public override bool CanOpenFile(string fileName) => fileName.EndsWith("log");
+
+        public override bool CanOpenAllFiles(IEnumerable<string> fileNames) => fileNames.All<string>(new Func<string, bool>(CanOpenFile));
+
+        public override Image LargeImage { get; set; }
     }
-
-    public Task SaveAsync(List<AnalogyLogMessage> messages, string fileName) => throw new NotImplementedException();
-
-    public bool CanOpenFile(string fileName) => fileName.EndsWith("log");
-
-    public bool CanOpenAllFiles(IEnumerable<string> fileNames) => fileNames.All<string>(new Func<string, bool>(CanOpenFile));
-
-    public Image LargeImage { get; set; }
-  }
 }
