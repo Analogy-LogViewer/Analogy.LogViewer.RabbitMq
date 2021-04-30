@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Analogy.Interfaces;
+using Analogy.Interfaces.DataTypes;
 
 namespace Analogy.UnitTests
 {
@@ -22,6 +23,11 @@ namespace Analogy.UnitTests
         public void AppendMessages(List<AnalogyLogMessage> messages, string dataSource)
         {
             this.messages.AddRange(messages);
+        }
+
+        public void ReportFileReadProgress(AnalogyFileReadProgress progress)
+        {
+            
         }
 
         public bool ForceNoFileCaching { get; set; }
