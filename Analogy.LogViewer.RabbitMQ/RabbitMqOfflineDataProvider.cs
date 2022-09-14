@@ -13,11 +13,10 @@ namespace Analogy.LogViewer.RabbitMq
     {
         private static string _title = "RabbitMQ";
 
-        public override async Task InitializeDataProviderAsync(IAnalogyLogger logger)
+        public override Task InitializeDataProvider(IAnalogyLogger logger)
         {
-            await base.InitializeDataProviderAsync(logger);
             LogReader = new RabbitMqLogReader();
-
+            return base.InitializeDataProvider(logger);
         }
         public override Image SmallImage { get; set; }
 
