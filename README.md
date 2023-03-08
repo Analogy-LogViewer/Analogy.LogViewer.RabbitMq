@@ -1,8 +1,5 @@
 # Analogy RabbitMq Parser  <img src="./Assets/AnalogyRabbitMq.png" align="right" width="155px" height="155px">
 
-
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/899b6bab8b954353a8695b1762f89354)](https://app.codacy.com/gh/Analogy-LogViewer/Analogy.LogViewer.RabbitMq?utm_source=github.com&utm_medium=referral&utm_content=Analogy-LogViewer/Analogy.LogViewer.RabbitMq&utm_campaign=Badge_Grade)
 [![Nuget](https://img.shields.io/nuget/dt/Analogy.LogViewer.RabbitMq)](https://www.nuget.org/packages/Analogy.LogViewer.RabbitMq/) 
 ![.NET Core Desktop](https://github.com/Analogy-LogViewer/Analogy.LogViewer.RabbitMq/workflows/.NET%20Core%20Desktop/badge.svg)
 <a href="https://github.com/Analogy-LogViewer/Analogy.LogViewer.RabbitMq/issues">
