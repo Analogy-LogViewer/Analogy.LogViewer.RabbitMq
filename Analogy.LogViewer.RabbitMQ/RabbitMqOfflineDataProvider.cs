@@ -55,7 +55,7 @@ namespace Analogy.LogViewer.RabbitMq
 
         public RabbitMqLogReader LogReader { get; set; }
 
-        public override async Task<IEnumerable<AnalogyLogMessage>> Process(
+        public override async Task<IEnumerable<IAnalogyLogMessage>> Process(
           string fileName,
           CancellationToken token,
           ILogMessageCreatedHandler messagesHandler)

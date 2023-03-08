@@ -16,12 +16,12 @@ namespace Analogy.LogViewer.RabbitMq
 
         public string Body { get; set; }
 
-        public AnalogyLogMessage ToAnalogyLogMessage()
+        public IAnalogyLogMessage ToAnalogyLogMessage()
         {
             AnalogyLogMessage analogyLogMessage = new AnalogyLogMessage();
             analogyLogMessage.Date = TimeStamp;
             analogyLogMessage.Text = Body;
-            analogyLogMessage.Category = Category.ToString();
+            analogyLogMessage.AddOrReplaceAdditionalProperty("Category", Category.ToString());
             return analogyLogMessage;
         }
 

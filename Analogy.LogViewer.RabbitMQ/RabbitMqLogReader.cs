@@ -20,7 +20,7 @@ namespace Analogy.LogViewer.RabbitMq
         {
             if (string.IsNullOrEmpty(fileName))
             {
-                AnalogyLogMessage analogyLogMessage = new AnalogyLogMessage("File is null or empty. Aborting.", (AnalogyLogLevel)7, (AnalogyLogClass)0, source, "None", (string)null, (string)null, 0, 0, (Dictionary<string, string>)null, (string)null, nameof(Process), "E:\\workspaces\\danw25\\rabbit\\Analogy.LogViewer.RabbitMq\\RabbitMqLogReader.cs", 22);
+                AnalogyLogMessage analogyLogMessage = new AnalogyLogMessage("File is null or empty. Aborting.", AnalogyLogLevel.Information, (AnalogyLogClass)0, source, "", "None"); 
                 analogyLogMessage.Source = source;
                 analogyLogMessage.Module = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
                 AnalogyLogMessage empty = analogyLogMessage;
@@ -33,7 +33,7 @@ namespace Analogy.LogViewer.RabbitMq
            {
                try
                {
-                   List<AnalogyLogMessage> list = Parser.ParseLog(File.ReadAllLines(fileName), CultureInfo.CurrentCulture).ToList<Message>().Select<Message, AnalogyLogMessage>((Func<Message, AnalogyLogMessage>)(line => line.ToAnalogyLogMessage())).ToList<AnalogyLogMessage>();
+                   List<IAnalogyLogMessage> list = Parser.ParseLog(File.ReadAllLines(fileName), CultureInfo.CurrentCulture).ToList<Message>().Select<Message, IAnalogyLogMessage>((Func<Message, IAnalogyLogMessage>)(line => line.ToAnalogyLogMessage())).ToList();
                    messagesHandler.AppendMessages(list, fileName);
                    return (IEnumerable<AnalogyLogMessage>)list;
                }
