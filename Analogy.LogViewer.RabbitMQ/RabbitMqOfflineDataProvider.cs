@@ -62,10 +62,10 @@ namespace Analogy.LogViewer.RabbitMq
         {
             if (!CanOpenFile(fileName))
             {
-                return (IEnumerable<AnalogyLogMessage>)new List<AnalogyLogMessage>(0);
+                return new List<AnalogyLogMessage>(0);
             }
 
-            IEnumerable<AnalogyLogMessage> analogyLogMessages = await LogReader.Process(fileName, token, messagesHandler);
+            IEnumerable<IAnalogyLogMessage> analogyLogMessages = await LogReader.Process(fileName, token, messagesHandler);
             return analogyLogMessages;
         }
 

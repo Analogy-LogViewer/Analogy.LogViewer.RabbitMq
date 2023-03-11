@@ -13,7 +13,7 @@ namespace Analogy.LogViewer.RabbitMq
     {
         private string source = "";
 
-        public async Task<IEnumerable<AnalogyLogMessage>> Process(
+        public async Task<IEnumerable<IAnalogyLogMessage>> Process(
           string fileName,
           CancellationToken token,
           ILogMessageCreatedHandler messagesHandler)
@@ -25,17 +25,18 @@ namespace Analogy.LogViewer.RabbitMq
                 analogyLogMessage.Module = System.Diagnostics.Process.GetCurrentProcess().ProcessName;
                 AnalogyLogMessage empty = analogyLogMessage;
                 messagesHandler.AppendMessage(empty, GetFileNameAsDataSource(fileName));
-                List<AnalogyLogMessage> analogyLogMessageList = new List<AnalogyLogMessage>();
-                analogyLogMessageList.Add(empty);
-                return (IEnumerable<AnalogyLogMessage>)analogyLogMessageList;
+                List<AnalogyLogMessage> analogyLogMessageList = new List<AnalogyLogMessage> { empty };
+                return analogyLogMessageList;
             }
-            Task<IEnumerable<AnalogyLogMessage>> task = new Task<IEnumerable<AnalogyLogMessage>>((Func<IEnumerable<AnalogyLogMessage>>)(() =>
+            Task<IEnumerable<IAnalogyLogMessage>> task = new Task<IEnumerable<IAnalogyLogMessage>>((Func<IEnumerable<IAnalogyLogMessage>>)(() =>
            {
                try
                {
-                   List<IAnalogyLogMessage> list = Parser.ParseLog(File.ReadAllLines(fileName), CultureInfo.CurrentCulture).ToList<Message>().Select<Message, IAnalogyLogMessage>((Func<Message, IAnalogyLogMessage>)(line => line.ToAnalogyLogMessage())).ToList();
+                   List<IAnalogyLogMessage> list = Parser
+                       .ParseLog(File.ReadAllLines(fileName), CultureInfo.CurrentCulture).ToList()
+                       .Select((Func<Message, IAnalogyLogMessage>)(line => line.ToAnalogyLogMessage())).ToList();
                    messagesHandler.AppendMessages(list, fileName);
-                   return (IEnumerable<AnalogyLogMessage>)list;
+                   return (IEnumerable<IAnalogyLogMessage>)list;
                }
                catch (Exception ex)
                {
@@ -44,7 +45,7 @@ namespace Analogy.LogViewer.RabbitMq
                }
            }));
             task.Start();
-            IEnumerable<AnalogyLogMessage> analogyLogMessages = await task;
+            IEnumerable<IAnalogyLogMessage> analogyLogMessages = await task;
             return analogyLogMessages;
         }
 
